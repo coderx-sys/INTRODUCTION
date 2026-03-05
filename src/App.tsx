@@ -50,12 +50,13 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/ADI-resume.pdf';
+    link.download = 'Adityaraj_Desai_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -123,7 +124,7 @@ export default function App() {
                 <a href={`mailto:${resumeData.basics.email}`} className="p-2 text-slate-400 hover:text-white transition-colors">
                   <Mail className="w-5 h-5" />
                 </a>
-                <button className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold rounded-full transition-all flex items-center gap-2">
+                <button onClick={downloadResume} className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold rounded-full transition-all flex items-center gap-2">
                   Resume <Download className="w-4 h-4" />
                 </button>
               </div>
@@ -156,7 +157,7 @@ export default function App() {
                     {item}
                   </button>
                 ))}
-                <button className="mt-8 px-8 py-4 bg-blue-600 text-white rounded-full font-bold flex items-center gap-2">
+                <button onClick={downloadResume} className="mt-8 px-8 py-4 bg-blue-600 text-white rounded-full font-bold flex items-center gap-2">
                   Download Resume <Download className="w-5 h-5" />
                 </button>
               </motion.div>
@@ -204,7 +205,7 @@ export default function App() {
                     </button>
                   </MagneticButton>
                   <MagneticButton>
-                    <button className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl border border-white/10 transition-all flex items-center gap-2">
+                    <button onClick={downloadResume} className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl border border-white/10 transition-all flex items-center gap-2">
                       Download CV <Download className="w-5 h-5" />
                     </button>
                   </MagneticButton>
