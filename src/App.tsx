@@ -52,7 +52,7 @@ export default function App() {
 
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/ADI-resume.pdf';
+    link.href = '/INTRODUCTION/ADI-resume.pdf';
     link.download = 'Adityaraj_Desai_Resume.pdf';
     document.body.appendChild(link);
     link.click();
