@@ -241,7 +241,11 @@ export default function App() {
                 className="relative hidden lg:block"
               >
                 <div className="relative z-10 w-full aspect-square rounded-3xl overflow-hidden border border-white/10 bg-slate-900/50 backdrop-blur-2xl flex items-center justify-center">
-                  <div className="text-9xl font-bold text-blue-500/20 select-none">AD</div>
+                  <img
+                    src="/INTRODUCTION/profile-pic.png"
+                    alt="Adityaraj Desai - Profile Picture"
+                    className="w-full h-full object-cover"
+                  />
                   {/* Abstract shapes for futuristic feel */}
                   <div className="absolute top-10 right-10 w-32 h-32 bg-blue-500/20 blur-3xl rounded-full animate-pulse" />
                   <div className="absolute bottom-10 left-10 w-40 h-40 bg-cyan-500/20 blur-3xl rounded-full animate-pulse delay-700" />
