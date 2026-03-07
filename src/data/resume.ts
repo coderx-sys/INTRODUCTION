@@ -37,7 +37,7 @@ export const resumeData = {
     }
   ],
   skills: {
-    technical: ["Python", "JavaScript", "HTML5", "Material-UI"],
+    technical: ["Python", "HTML5", "Material-UI"],
     specialized: ["Full-Stack Android", "Web Applications", "3D/VFX", "Computer Vision"],
     core: ["Scalable Software", "High-performance Applications", "Data Analytics Dashboards", "UI/UX Design"]
   },
