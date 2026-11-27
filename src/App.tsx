@@ -1,6 +1,3 @@
-Use this code to replace `src/App.tsx`. It removes Experience and adds the Projects section, but still requires creating `src/components/Projects.tsx`.
-
-```tsx name=src/App.tsx url=https://github.com/coderx-sys/INTRODUCTION/blob/main/src/App.tsx
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { SplashScreen } from './components/SplashScreen';
@@ -318,5 +315,3 @@ export default function App() {
     </div>
   );
 }
-```
-
